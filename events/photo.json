@@ -20,11 +20,11 @@
                 "s3SchemaVersion": "1.0",
                 "configurationId": "6c2a7cb5-be17-4e30-b1ab-6d3b33a999b7",
                 "bucket": {
-                    "name": "djenny-shiddy-test-bucket",
+                    "name": "process-visitors-bucket",
                     "ownerIdentity": {
                         "principalId": "A1X3B26SQCH0U1"
                     },
-                    "arn": "arn:aws:s3:::djenny-shiddy-test-bucket"
+                    "arn": "arn:aws:s3:::process-visitors-bucket"
                 },
                 "object": {
                     "key": "VisitorFaces/badgephoto.jpg",

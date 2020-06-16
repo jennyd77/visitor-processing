@@ -32,7 +32,8 @@ Resources:
 
   SrcBucket:
     Type: AWS::S3::Bucket
-    BucketName: djenny-shiddy-test-bucket
+    Properties:
+      BucketName: process-visitors-bucket
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function

@@ -2,7 +2,7 @@
 flags=--profile pc --region ap-southeast-2
 
 test:
-	sam local invoke "ProcessVisitorsFunction" --event events/photo.json ${flags}
+	sam local invoke "ProcessVisitorsFunction" --event events/photo.json --profile pc --region ap-southeast-2
 
 deploy:
 	sam package --s3-bucket djenny-sam-builds --output-template-file packaged.yaml ${flags}

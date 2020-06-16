@@ -12,7 +12,7 @@ Resources:
   ProcessVisitorsFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://djenny-sam-builds/0852805740b58288a4738d9b28e60850
+      CodeUri: s3://djenny-sam-builds/aa2ac9f59fae43e6481ea6ca4992c6a3
       Handler: app.lambda_handler
       Runtime: python3.7
       Role: arn:aws:iam::586914838657:role/service-role/AWSLambdaRekognitionRole
@@ -30,7 +30,8 @@ Resources:
                   Value: VisitorFaces/
   SrcBucket:
     Type: AWS::S3::Bucket
-    BucketName: djenny-shiddy-test-bucket
+    Properties:
+      BucketName: process-visitors-bucket
 Outputs:
   ProcessVisitorsFunction:
     Description: ProcessVisitors Lambda Function ARN

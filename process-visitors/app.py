@@ -26,7 +26,7 @@ def search_face_in_collection(collection_id,bucket,key):
                                 Image={'S3Object':{'Bucket':bucket,'Name':key}},
                                 FaceMatchThreshold=90,
                                 MaxFaces=2)
-                                
+    print(response)                            
     faceMatches=response['FaceMatches']
     print ('Matching faces')
     for match in faceMatches:
@@ -69,15 +69,15 @@ def lambda_handler(event, context):
     '''Demonstrates S3 trigger that uses
     Rekognition APIs to detect faces, labels and index faces in S3 Object.
     '''
-    #print("Received event: " + json.dumps(event, indent=2))
+    print("Received event: " + json.dumps(event, indent=2))
     #logger.info('## Event')
-    logger.info(json.dumps(event))
+    #logger.info(json.dumps(event))
 
     # Get the object from the event
     bucket = event['Records'][0]['s3']['bucket']['name']
     key = event['Records'][0]['s3']['object']['key']
-    logger.info(bucket)
-    logger.info(key)
+    #logger.info(bucket)
+    #logger.info(key)
     warrants_collection_id='warrants'
     victims_collection_id='victims'
     attendees_collection_id='attendees'
