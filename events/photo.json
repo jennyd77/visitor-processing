@@ -27,10 +27,10 @@
                     "arn": "arn:aws:s3:::process-visitors-bucket"
                 },
                 "object": {
-                    "key": "VisitorFaces/badgephoto.jpg",
-                    "size": 4273,
-                    "eTag": "3b3ba214af120107a5ecd01bc35a1919",
-                    "sequencer": "005EE8A209F8BB49E2"
+                    "key": "VisitorFaces/Picture1.png",
+                    "size": 183449,
+                    "eTag": "ebeca1229435ff47a7ec189c952ceaef",
+                    "sequencer": "005EE8C2BBA1A68DA2"
                 }
             }
         }

@@ -12,7 +12,7 @@ Resources:
   ProcessVisitorsFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://djenny-sam-builds/aa2ac9f59fae43e6481ea6ca4992c6a3
+      CodeUri: s3://djenny-sam-builds/ff7300d9cf6b6f3b029e03f802351efb
       Handler: app.lambda_handler
       Runtime: python3.7
       Role: arn:aws:iam::586914838657:role/service-role/AWSLambdaRekognitionRole
