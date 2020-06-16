@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'process-visitors
+
+  Sample SAM Template for process-visitors
+
+  '
+Globals:
+  Function:
+    Timeout: 3
+Resources:
+  ProcessVisitorsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://djenny-sam-builds/0852805740b58288a4738d9b28e60850
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      Role: arn:aws:iam::586914838657:role/service-role/AWSLambdaRekognitionRole
+      Events:
+        PhotoDrop:
+          Type: S3
+          Properties:
+            Bucket:
+              Ref: SrcBucket
+            Events: s3:ObjectCreated:*
+            Filter:
+              S3Key:
+                Rules:
+                - Name: prefix
+                  Value: VisitorFaces/
+  SrcBucket:
+    Type: AWS::S3::Bucket
+    BucketName: djenny-shiddy-test-bucket
+Outputs:
+  ProcessVisitorsFunction:
+    Description: ProcessVisitors Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - ProcessVisitorsFunction
+      - Arn

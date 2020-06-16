@@ -1,0 +1,38 @@
+{
+    "Records": [
+        {
+            "eventVersion": "2.1",
+            "eventSource": "aws:s3",
+            "awsRegion": "ap-southeast-2",
+            "eventTime": "2020-06-16T10:42:17.834Z",
+            "eventName": "ObjectCreated:Put",
+            "userIdentity": {
+                "principalId": "AWS:AROAYRJWZXCAXQNQLT2FT:djenny-Isengard"
+            },
+            "requestParameters": {
+                "sourceIPAddress": "117.20.68.108"
+            },
+            "responseElements": {
+                "x-amz-request-id": "49F9FF4F5BF51768",
+                "x-amz-id-2": "M7nLLBicGbbXm8dkg7Qh45hPwEO+16BAMunzzuxVD+t5Q0yZs5CMNN3AAQypqshlrXs8B1AjTA3iWHyQRFVLXFjql+JgGCtb"
+            },
+            "s3": {
+                "s3SchemaVersion": "1.0",
+                "configurationId": "6c2a7cb5-be17-4e30-b1ab-6d3b33a999b7",
+                "bucket": {
+                    "name": "djenny-shiddy-test-bucket",
+                    "ownerIdentity": {
+                        "principalId": "A1X3B26SQCH0U1"
+                    },
+                    "arn": "arn:aws:s3:::djenny-shiddy-test-bucket"
+                },
+                "object": {
+                    "key": "VisitorFaces/badgephoto.jpg",
+                    "size": 4273,
+                    "eTag": "3b3ba214af120107a5ecd01bc35a1919",
+                    "sequencer": "005EE8A209F8BB49E2"
+                }
+            }
+        }
+    ]
+}
